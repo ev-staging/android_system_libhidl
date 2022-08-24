@@ -27,6 +27,15 @@ namespace android {
 namespace hardware {
 namespace details {
 
+#ifdef LEGACY_CONTRUCTOR_MAP
+// TODO(b/69122224): remove this once no prebuilts reference it
+// deprecated; use getBnConstructorMap instead.
+extern DoNotDestruct<BnConstructorMap> gBnConstructorMap;
+// TODO(b/69122224): remove this once no prebuilts reference it
+// deprecated; use getBsConstructorMap instead.
+extern DoNotDestruct<BsConstructorMap> gBsConstructorMap;
+#endif
+
 // TODO(b/69122224): remove this once no prebuilts reference it
 extern DoNotDestruct<ConcurrentMap<wp<::android::hidl::base::V1_0::IBase>, SchedPrio>>
         gServicePrioMap;
