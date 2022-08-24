@@ -139,6 +139,7 @@ cc_defaults {
         "hidl-module-defaults",
         "libhidl-defaults",
         "libhwbinder-impl-shared-libs",
+        "libhidl_legacy_contructor_defaults",
     ],
 
     shared_libs: [
